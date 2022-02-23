@@ -3,9 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname+'/dist/frontendestu'));
+app.use(express.static(__dirname+'/src/frontendestu'));
 app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/frontendestu/index.html'));
+    res.sendFile(path.join(__dirname+'/src/frontendestu/index.html'));
 });
 
 app.listen(process.env.PORT || 8080);
