@@ -12,8 +12,7 @@ export class EstudianteService {
   list: estudiante[];
   private actualizarFormulario = new BehaviorSubject<estudiante>({} as any);
 
-  constructor(private http: HttpClient) { }
-  
+  constructor(private http: HttpClient) { }  
 
   guardarEstudiante(estudiantes: estudiante): Observable<estudiante>{
     return this.http.post<estudiante>(`${this.myAppUrl}${this.myApiUrl}`, estudiantes)
