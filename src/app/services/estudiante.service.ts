@@ -7,7 +7,7 @@ import { estudiante } from '../models/estudiante';
   providedIn: 'root'
 })
 export class EstudianteService {
-  myAppUrl = 'https://crudestudiantes.somee.com/';
+  myAppUrl = 'http://Entrega.somee.com/';
   myApiUrl = 'api/estudiante/';
   list: estudiante[];
   private actualizarFormulario = new BehaviorSubject<estudiante>({} as any);
