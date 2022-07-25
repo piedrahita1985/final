@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="guardarEstudiante()">
+
+    <i class="fas fa-user"></i>
+    <div class="form-group ">
+        <div class="input-group mb-2">
+            <div class="input-group-prepend ">
+                <!--<div class="input-group-text bg-white">
+                    <i class="fas fa-user-circle" [class.green-icon]="this.form.get('strCedulaEstudiante').valid" [class.red-icon]="this.form.get('strCedulaEstudiante').invalid"></i>
+                </div>-->
+            </div>
+            <input type="text" class="form-control" formControlName="strCedulaEstudiante" placeholder="Cedula">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <!--  <div class="input-group-text bg-white">
+                    <i class="fas fa-user-circle"></i>
+                </div>-->
+            </div>
+            <input type="text" class="form-control" formControlName="strNombreEstudiante" placeholder="Nombre">
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-group col-md-7">
+            <div class="form-group">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <!-- <div class="input-group-text bg-white">
+                            <i class="fas fa-user-circle"></i>
+                        </div> -->
+                    </div>
+                    <input type="int" class="form-control" formControlName="intEdadEstudiante" placeholder="Edad" maxlength="2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" [disabled]="form.invalid" type="submit"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+</form>

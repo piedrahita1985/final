@@ -1,0 +1,14 @@
+<table class="table table-sm">
+    <i class="fas fa-user"></i>
+    <tr *ngFor="let  Estudiante of estudianteService.list">
+        <td>{{Estudiante.strCedulaEstudiante}}</td>
+        <td>{{Estudiante.strNombreEstudiante}}</td>
+        <td>{{Estudiante.intEdadEstudiante}}</td>
+        <td>
+            <i class="far fa-edit fa-lg text-success" (click)="editar(Estudiante)" style="cursor:  pointer;"></i>
+        </td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarEstudiante(Estudiante)" style="cursor:  pointer;"></i>
+        </td>
+    </tr>
+</table>
